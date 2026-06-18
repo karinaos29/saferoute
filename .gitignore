@@ -1,0 +1,5 @@
+saferoute-backend/serviceAccountKey.json
+.env
+*.env
+saferoute-backend/.env
+__pycache__/
