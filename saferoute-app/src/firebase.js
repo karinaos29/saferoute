@@ -27,4 +27,15 @@ export const logInWithGoogle = async () => {
   }
 };
 
+export const handleRedirectResult = async () => {
+  try {
+    const result = await getRedirectResult(auth);
+    return result?.user || null;
+  } catch (error) {
+    console.error("Redirect result failed", error);
+    return null;
+  }
+};
+
+
 export const logOut = () => signOut(auth);
