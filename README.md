@@ -176,6 +176,8 @@ Four commitments shaped every decision in this prototype:
 <br><br>
 
 **Built by Elene Samsiani & Karina Osipova**
+
+<br><br>
 <sub>Democracy Hackathon 2026 · in partnership with the Council of Europe & Democracy Reporting International</sub>
 
 <br>
