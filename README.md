@@ -155,9 +155,9 @@ Four commitments shaped every decision in this prototype:
 
 <br>
 
-> 🎬 **Demo video:** *[link to be added]*
+> 🎬 **Demo video:** *(https://www.youtube.com/watch?v=KRuC3sNf4uo)*
 
-> 🌐 **Live website:** *[link to be added]*
+> 🌐 **Live website:** *(https://saferoute-coe.vercel.app/home.html)*
 
 <br>
 
