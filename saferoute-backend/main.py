@@ -50,7 +50,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # tighten to your domain in production
+    allow_origins=["*"],   
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -75,7 +75,7 @@ async def analyze_case(req: AnalyzeRequest):
         log.exception("Analysis failed")
         raise HTTPException(status_code=500, detail=str(e))
 
-    # Optionally persist AI fields back into Firestore if case_id is provided
+    
     if req.case_id:
         try:
             await update_case_ai_fields(req.case_id, result.model_dump())
@@ -100,7 +100,7 @@ async def analyze_image(
         raise HTTPException(status_code=400, detail="Only image files are accepted.")
 
     raw = await file.read()
-    # Resize large images to cap tokens
+   
     img = Image.open(io.BytesIO(raw))
     if max(img.size) > 2000:
         img.thumbnail((2000, 2000))
@@ -180,7 +180,7 @@ def _normalise_case(d: dict) -> dict:
     for k, v in d.items():
         if hasattr(v, "isoformat"):
             d[k] = v.isoformat()
-        elif hasattr(v, "timestamp"):      # Firestore Timestamp
+        elif hasattr(v, "timestamp"):      
             d[k] = datetime.fromtimestamp(v.timestamp(), tz=timezone.utc).isoformat()
     return d
 
